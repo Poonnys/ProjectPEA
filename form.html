@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>ฟอร์ม</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+ 
+<form>
+ 
+<h2>Form Test</h2>
+
+  <label for="qty"></label>
+  <input type="number" id="qty">
+
+  <label for="price"></label>
+  <input type="number" id="price">
+
+  <label for="service"></label>
+  <input type="number" id="service">
+
+  <label for="total">ผลรวม (Total):</label>
+  <input type="number" id="total" readonly>
+</form>
+
+
+<script>
+  const input1 = document.getElementById("field1");
+  const input2 = document.getElementById("field2");
+  const input3 = document.getElementById("field3");
+  const totalField = document.getElementById("total");
+
+  function calculateTotal() {
+    const val1 = parseFloat(input1.value) || 0;
+    const val2 = parseFloat(input2.value) || 0;
+    const val3 = parseFloat(input3.value) || 0;
+
+    const total = (val1 + val2) + val3; // สูตร: 
+    // 
+    // 
+    //  ราคา + ค่าบริการ
+    totalField.value = total.toFixed(2);
+  }
+
+  [input1, input2, input3].forEach(input => {
+    input.addEventListener("input", calculateTotal);
+  });
+</script>
+
+</body>
+</html>
