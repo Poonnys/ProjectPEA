@@ -2,52 +2,27 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <title>ฟอร์ม</title>
+  <title>Form Test</title>
   <link rel="stylesheet" href="style.css">
-  
 </head>
 <body>
- 
-<form>
- 
-<h2>Form Test</h2>
 
-  <label for="qty">ค่า 1</label>
-  <input type="number" id="qty">
+  <h2>Form Test</h2>
 
-  <label for="price">ค่า 2</label>
-  <input type="number" id="price">
+  <form>
+    <label for="qty">จำนวน:</label>
+    <input type="number" id="qty" placeholder="เช่น 2">
 
-  <label for="service">ค่า 3</label>
-  <input type="number" id="service">
+    <label for="price">ราคาต่อหน่วย:</label>
+    <input type="number" id="price" placeholder="เช่น 150">
 
-  <label for="total">ผลรวม (Total):</label>
-  <input type="number" id="total" readonly>
-</form>
+    <label for="service">ค่าบริการเพิ่มเติม:</label>
+    <input type="number" id="service" placeholder="เช่น 20">
 
+    <label for="total">ผลรวม:</label>
+    <input type="number" id="total" readonly>
+  </form>
 
-<script>
-  const input1 = document.getElementById("field1");
-  const input2 = document.getElementById("field2");
-  const input3 = document.getElementById("field3");
-  const totalField = document.getElementById("total");
-
-  function calculateTotal() {
-    const val1 = parseFloat(input1.value) || 0;
-    const val2 = parseFloat(input2.value) || 0;
-    const val3 = parseFloat(input3.value) || 0;
-
-    const total = (val1 + val2) + val3; // สูตร: 
-    // 
-    // 
-    //  ราคา + ค่าบริการ
-    totalField.value = total.toFixed(2);
-  }
-
-  [input1, input2, input3].forEach(input => {
-    input.addEventListener("input", calculateTotal);
-  });
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
