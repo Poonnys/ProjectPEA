@@ -1,72 +1,16 @@
-/* style.css */
-
 body {
-  font-family: 'Segoe UI', Tahoma,    Geneva, Verdana, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
-  height: 100vh; /* เต็มจอแนวตั้ง */
-  margin: 0;
-
-  /* ✅ จัดฟอร์มให้อยู่กลางจอ */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-family: sans-serif;
+  padding: 30px;
 }
-
-form {
-  background: white;
-  padding: 25px;
-  border-radius: 17px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  width: 100%;
-}
-
-h2 {
-  color: #3f03c0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-    
-}
-
 label {
   display: block;
-  margin-top: 18px;
-  font-weight: bold;
+  margin-top: 15px;
 }
-
-input[type="text"],
-input[type="number"],
-input[type="email"],
-input[type="tel"] {
-  width: 100%;
-  padding: 8px 10px;
+input {
+  width: 300px;
+  padding: 8px;
   margin-top: 5px;
-  border: 1px solid #d4d4d4;
-  border-radius: 5px;
-  box-sizing: border-box;
-  border-radius: 14px;
 }
-
 input[readonly] {
   background-color: #f0f0f0;
-}
-
-button,
-input[type="submit"] {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #3f03c0;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  width: 100%;
-}
-
-button:hover,
-input[type="submit"]:hover {
-  background-color: #3f03c0
 }
